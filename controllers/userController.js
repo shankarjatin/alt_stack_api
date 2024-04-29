@@ -10,7 +10,7 @@ exports.getUserInfo = async (req, res, next) => {
             return res.status(404).json({ message: 'User not found' });
         }
         // Return the user information
-        res.status(200).json({ user });
+        res.status(200).json({ username: user.username });
     } catch (error) {
         next(error);
     }
